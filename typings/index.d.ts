@@ -1,4 +1,8 @@
-import { Moment } from 'app/extend/moment';
 import 'egg';
+import { Knex } from 'knex';
 
-declare module 'egg' {}
+declare module 'egg' {
+  interface Application {
+    knex: Knex;
+  }
+}

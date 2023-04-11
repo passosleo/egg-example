@@ -14,6 +14,8 @@ export default (appInfo: EggAppInfo) => {
   //   moment: `${appInfo.baseDir}/app/extend/moment.ts`,
   // };
 
+  config.beforeStart = ['app'];
+
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,

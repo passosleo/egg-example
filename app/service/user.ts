@@ -2,9 +2,8 @@ import { Service } from 'egg';
 
 export default class UserService extends Service {
   async getUser() {
-    const { logger } = this;
-    logger.info('UserService.getUser called');
-    return 'Leo';
+    const { app } = this;
+    return app.knex.first().from('GRZ_API_USER');
   }
 
   async createUser() {
